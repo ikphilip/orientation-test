@@ -1,7 +1,28 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
 </head>
 <body>
-  <h1>Testing Orientation and Fullscreen API</h1>
+  <div id="container">
+    <h1>
+      Testing Fullscreen and Orientation APIs
+    </h1>
+    <div id="application">
+      <menu>
+        <button id='fullscreen-btn'>
+        Fullscreen
+        </button>
+      </menu>
+      <div id="content" class="content">
+        <p>
+          This is full screen content.
+        </p>
+      </div>
+    </div>
+    <div id="browser-stats">
+      Is Full Screen Available? <span id="fullscreen-avail"></span>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
