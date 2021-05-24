@@ -10,7 +10,7 @@ function toggleFullScreen() {
     elem.requestFullscreen()
       .then(() => {
         screen.orientation.lock("landscape")
-        screen.mozLockOrientation.lock("portrait-primary")
+        screen.mozLockOrientation.lock("landscape-primary")
       })
       .catch(err => {
       alert(`Error attempting to enable full-screen mode: ${err.message} (					${err.name})`);
