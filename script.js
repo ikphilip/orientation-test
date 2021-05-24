@@ -7,7 +7,11 @@ function toggleFullScreen() {
  let elem = document.querySelector("#content");
 
   if (!document.fullscreenElement) {
-    elem.requestFullscreen().catch(err => {
+    elem.requestFullscreen()
+      .then(() => {
+        screen.orientation.lock("landscape")
+      })
+      .catch(err => {
       alert(`Error attempting to enable full-screen mode: ${err.message} (					${err.name})`);
     });
   } else {
